@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-node
+  labels:
+    app: worker-node
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: worker-node
+  template:
+    metadata:
+      labels:
+        app: worker-node
+    spec:
+      containers:
+      - name: myapp
+        image: myapp:1.0.0
+        ports:
+        - containerPort: 8080
