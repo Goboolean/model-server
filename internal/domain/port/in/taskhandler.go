@@ -1,7 +1,9 @@
-package port
+package in
+
+import "github.com/Goboolean/model-server/internal/domain/entity"
 
 
 type TaskHandler interface {
-	RegisterTask() error
-	CancelTask(taskid int64) error
+	RegisterTask(*entity.Task) error
+	CancelTask(int64) error
 }
