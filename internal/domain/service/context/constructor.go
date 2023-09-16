@@ -13,7 +13,6 @@ type customContext struct {
 	ctx context.Context
 	channel chan struct{}
 	cancelFunc context.CancelFunc
-
 }
 
 
